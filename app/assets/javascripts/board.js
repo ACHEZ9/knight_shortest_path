@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  alert("test");
+  // alert("test");
   // $('.black_space').on('click', function() {
   //   alert("test");
   // });
