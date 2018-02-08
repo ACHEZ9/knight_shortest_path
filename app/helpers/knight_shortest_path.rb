@@ -15,7 +15,7 @@ class KnightShortestPath
 
     while !queue.empty? do
       cur = queue.pop
-      return cur if cur.position == finish
+      return cur if cur.chess_notation == finish
       cur.get_valid_moves.each do |move|
         queue << Node.new(move, cur)
       end
@@ -24,10 +24,10 @@ class KnightShortestPath
   end
 
   def get_path(node)
-    path = [node.position]
+    path = [node.chess_notation]
     cur = node
     while !cur.prev.nil?
-      path.insert(0, cur.prev.position)
+      path.insert(0, cur.prev.chess_notation)
       cur = cur.prev
     end
 

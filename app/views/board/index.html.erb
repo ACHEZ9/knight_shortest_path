@@ -1,2 +1,17 @@
-<h1>Board#index</h1>
-<p>Find me in app/views/board/index.html.erb</p>
+<%= javascript_include_tag "board" %>
+
+<div class="row">
+  <table id="board">
+    <%= create_board()%>
+  </table>
+</div>
+
+<div style="text-align:center;">
+  <%= link_to "Restart", root_path %>
+  <br/>
+  <br/>
+
+  <div id="start">Start: </div>
+  <div id="end">End: </div>
+  <div id="path">Path: </div>
+</div>

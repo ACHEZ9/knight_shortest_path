@@ -3,8 +3,8 @@ class BoardController < ApplicationController
   end
 
   def shortest_path
-    start = params[:start].map(&:to_i)
-    finish = params[:finish].map(&:to_i)
+    start = params[:start]
+    finish = params[:finish]
 
     @path = KnightShortestPath.new().get_shortest_path(start, finish)
 
