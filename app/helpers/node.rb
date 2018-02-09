@@ -22,7 +22,7 @@ class Node
   private
 
   def is_position_valid?(position)
-    position[0].between?(0, 8) && position[1].between?(0, 8)
+    position[0].between?(1, 8) && position[1].between?(1, 8)
   end
 
   def convertFromChessNotation(chess_notation)
